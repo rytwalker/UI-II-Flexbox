@@ -187,15 +187,14 @@ p a:hover {
 }
 
 .col-50 {
-  vertical-align: top;
-  flex: 1 1 300px;
   padding: 10px;
+  width: 50%;
   /* border: 1px solid #000; */
 }
 
 .col-33 {
-  flex: 1 1 250px;
   padding: 10px;
+  width: 33.3%;
   /* border: 1px solid #000; */
 }
 
@@ -334,27 +333,55 @@ p a:hover {
 }
 
 /* FEATURE PAGE */
-.main-features {
+.features-container,
+.product-container,
+.services {
   opacity: 0;
   animation: fadein 500ms ease-in 200ms forwards;
 }
+.features-container .header,
+.product-container .header {
+  flex-direction: column;
+  margin-bottom: 30px;
+}
 
-.features {
-  padding: 140px 0 50px;
+.features,
+.product {
   text-align: center;
 }
 
-.features h2 {
+.features h2,
+.product h2 {
   margin-top: 20px;
 }
 
-.features p {
+.features p,
+product p {
   text-align: left;
 }
 
 .features i {
   color: #cbecff;
   /* color: #999; */
+}
+
+.product .price {
+  color: #cbecff;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.product .price span {
+  font-size: 16px;
+  color: #000;
+  margin-left: 5px;
+}
+
+.product p {
+  margin-bottom: 20px;
 }
 
 /* LINKS SECTION */
@@ -379,12 +406,53 @@ p a:hover {
 }
 
 /* SERVICES */
-.services-header {
+.services .col-50 {
+  flex: 1 1 400px;
+}
+
+.services .header {
   flex-direction: column;
+}
+
+.services h1,
+.features-container h1,
+.product-container h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.services .header p,
+.features-container .header p,
+.product-container .header p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 .services-img {
   margin-bottom: 20px;
+}
+
+.services .row:first-of-type {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.services .row .col-50:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.services-bottom-img {
+  width: 100%;
+}
+
+.services .list {
+  margin-top: 20px;
+}
+
+.services .list .list-item {
+  margin-bottom: 10px;
 }
 
 /* CARD */
@@ -394,19 +462,15 @@ p a:hover {
   margin-bottom: 30px;
   padding: 20px;
   font-size: 18px;
-  flex: 1 1 400px;
   border: 1px solid black;
-}
-
-.card:nth-child(odd) {
-  margin-right: 30px;
 }
 
 .card p {
   margin-bottom: 20px;
 }
 
-.card button {
+.card button,
+.product button {
   border: 1px solid black;
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
@@ -414,6 +478,11 @@ p a:hover {
   padding: 10px 30px;
   cursor: pointer;
   transition: all 200ms;
+}
+
+.card button:hover,
+.product button:hover {
+  background-color: #cbecff;
 }
 
 @keyframes fadein {
