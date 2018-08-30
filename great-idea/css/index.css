@@ -110,7 +110,7 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  /* list-style: none; */
 }
 blockquote,
 q {
@@ -260,8 +260,7 @@ p a:hover {
   text-align: center;
   width: 65%;
   margin: 0 auto;
-
-  /* animation: fromleft 500ms ease-in-out; */
+  animation: fromleft 500ms ease-in-out;
 }
 
 .heading-primary {
@@ -271,7 +270,7 @@ p a:hover {
 
 .header-image-container {
   text-align: center;
-  /* animation: fromright 500ms ease-in-out; */
+  animation: fromright 500ms ease-in-out;
 }
 
 .cta-button {
@@ -334,11 +333,13 @@ p a:hover {
 
 /* PAGE STYLES */
 
-.page-container {
+.page-container,
+.main-index {
   opacity: 0;
   animation: fadein 500ms ease-in 200ms forwards;
 }
 .page-container .header {
+  padding-top: 100px;
   flex-direction: column;
   margin-bottom: 30px;
 }
@@ -420,6 +421,7 @@ p a:hover {
 
 .services .list {
   margin-top: 20px;
+  padding-left: 20px;
 }
 
 .services .list .list-item {
@@ -459,6 +461,12 @@ p a:hover {
 /* LINKS SECTION */
 .links {
   text-align: center;
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.7;
 }
 
 .link-list a,
