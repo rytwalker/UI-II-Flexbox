@@ -399,7 +399,7 @@ p a:hover {
 
 /* SERVICES */
 .services .col-50 {
-  flex: 1 1 400px;
+  /* flex: 1 1 400px; */
 }
 
 .services-img {
@@ -411,8 +411,12 @@ p a:hover {
   border-bottom: 1px solid black;
 }
 
-.services .row .col-50:nth-child(odd) {
-  margin-right: 30px;
+.services .row {
+  justify-content: space-between;
+}
+
+.services .row .col-50 {
+  width: 48%;
 }
 
 .services-bottom-img {
@@ -540,8 +544,8 @@ p a:hover {
   }
 
   /* SERVICES PAGE */
-  .services .row .col-50:nth-child(odd) {
-    margin-right: 10px;
+  .services .row .col-50 {
+    width: 100%;
   }
 
   .card {
